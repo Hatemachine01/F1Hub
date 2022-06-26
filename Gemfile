@@ -50,7 +50,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec-rails'
+  gem 'rspec-rails' 
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'database_cleaner'
@@ -72,4 +72,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+group :production do
+  gem 'pg', '0.20.0'
+  gem 'rails_12factor'
 end
