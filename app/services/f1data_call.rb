@@ -13,8 +13,11 @@ require 'date'
 			@season_data << {
 				raceName: "#{race["raceName"]}",
 				raceDate: "#{race["date"]}",
-				raceLocation: "#{race["Circuit"]["Location"]["locality"]}"
+				raceLocation: "#{race["Circuit"]["Location"]["locality"]}",
+				raceStatus: (Date.parse(race["date"]) < Date.today ? "Finished" : nil),
+				raceURL: "#{race["url"]}" 
 			}
+			
 
 			if Date.parse(race["date"]) < Date.today
 				season_progress += 1
