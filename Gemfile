@@ -46,6 +46,11 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 gem 'bootstrap', '~> 5.1.3'
+gem 'local_time'
+gem 'nokogiri', '~> 1.13', '>= 1.13.6'
+gem "wikipedia-client"
+
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
