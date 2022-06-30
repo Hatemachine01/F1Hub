@@ -1,6 +1,6 @@
 class F1dataCall
 
-require_relative '.weather_api_key.rb'
+require '.weather_api_key.rb'
 require 'date'
 
 	def self.api_call
