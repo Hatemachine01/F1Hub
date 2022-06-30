@@ -1,10 +1,7 @@
 class F1dataCall
 
-<<<<<<< HEAD
 
-=======
-require '.weather_api_key.rb'
->>>>>>> 654a59ce1cac664e68bf48fc4b290837c4264f4f
+
 require 'date'
 
 	def self.api_call
@@ -46,7 +43,7 @@ require 'date'
 		response = Net::HTTP.get(uri)
 		data = JSON.parse(response)
 		next_race_info = []
-		key = ENV["WEATHER_API"]
+		p key = ENV["WEATHER_API"]
 		data["MRData"]['RaceTable']['Races'].each do |race|
 				next_race_info << {
 				raceName: "#{race["raceName"]}",
