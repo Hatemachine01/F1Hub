@@ -1,6 +1,7 @@
-
-
-
+  <div class="container">
+  <div class="row">
+    <div class="col">
+    
     <table class="table-container">
       <tr class="table-content driver1">
         <td>
@@ -67,6 +68,9 @@
           <span class="driver-name"><%= @data[5][:driverFirstName]%></span>
           <span class="driver-surname"><%= @data[5][:driverLastName]%></span>
           <span class="team">Mercedes</span>
+       <!--    <% if @data[5][:driverURL] != nil %>
+          <span class="team"><%= link_to "Profile", @data[5][:driverURL]%></span>
+          <% end %> -->
         </td>
         <td>
           <span class="points"><%= @data[5][:driverPoints]%> PST</span
@@ -121,7 +125,24 @@
       </tr>
     </table>
 
+    <div class="col">
+      
 
+    </div>
+
+    <div class="w-100"></div>
+  </div>
+</div>
+
+
+
+
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 40%">Season progress : 40%</div>
+</div>
+
+
+<!-- 
  <table class="table table-striped">
   <thead>
   <tr>
@@ -144,7 +165,7 @@
       <td><span class="points"> <%= driver[:driverPoints]%></span><i class="fas fa-chevron-right"></i></td> 
 
     </tr>
-  <% end %>
+  <% end %> -->
   </tbody>
 </table>
 

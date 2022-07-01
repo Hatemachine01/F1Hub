@@ -43,8 +43,11 @@ require 'date'
 		response = Net::HTTP.get(uri)
 		data = JSON.parse(response)
 		next_race_info = []
-		p key = ENV["WEATHER_API"]
+		 key = ENV["WEATHER_API"]
 		data["MRData"]['RaceTable']['Races'].each do |race|
+			zone = "Pacific Time (US & Canada)"
+			p ActiveSupport::TimeZone[zone].parse(race["Qualifying"]["time"])
+				
 				next_race_info << {
 				raceName: "#{race["raceName"]}",
 				raceDate: "#{race["date"]}",
@@ -81,18 +84,20 @@ require 'date'
 		season_standings_data = []
 		parsed_data = data['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings']
 		 parsed_data.each do |driver|
+		 	 driver['driver']
 			season_standings_data << {
 				driverPosition: "#{driver['position']}",
 				driverFirstName: "#{driver['Driver']['givenName']}",
 				driverLastName: "#{driver['Driver']['familyName']}",
 				driverCode: "#{driver['Driver']['code']}",
 				driverPoints: "#{driver['points']}",
+				driverURL: "#{driver['Driver']['url']}",
 			}
 
 		end
 
 		
-		p season_standings_data
+		 season_standings_data
 
 	end
 
