@@ -49,14 +49,14 @@ require 'date'
 				next_race_info << {
 				raceName: "#{race["raceName"]}",
 				raceDate: "#{race["date"]}",
-				raceTime: "#{race["time"]}",
+				raceTime: "#{race["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
 				raceFirstPracticeDate: "#{race["FirstPractice"]["date"]}",
-				raceFirstPracticeTime: "#{race["FirstPractice"]["time"]}",
+				raceFirstPracticeTime: "#{race["FirstPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
 				raceSecondPracticeDate: "#{race["SecondPractice"]["date"]}",
-				raceSecondPracticeTime: "#{race["SecondPractice"]["time"]}",
-				raceThirdPracticeTime: "#{race["ThirdPractice"]["time"]}",
+				raceSecondPracticeTime: "#{race["SecondPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
+				raceThirdPracticeTime: "#{race["ThirdPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
 				raceThirdPracticeDate: "#{race["ThirdPractice"]["date"]}",
-				raceQualifyingTime: "#{race["Qualifying"]["time"]}",
+				raceQualifyingTime: "#{race["Qualifying"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
 				}
 				city = race["Circuit"]["Location"]['locality']
 				weather_info = "http://api.openweathermap.org/data/2.5/weather?q=#{city}&appid=#{key}&units=imperial"
