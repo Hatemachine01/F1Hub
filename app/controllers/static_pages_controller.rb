@@ -11,7 +11,8 @@ class StaticPagesController < ApplicationController
     feed.items.each do |item|
     	@race_news << {
     		 	 title: "#{item.title}",
-       			 link: "#{item.link}"
+       			 link: "#{item.link}",
+       			 pubDate: "#{item.pubDate}"
     	}
      
     end
