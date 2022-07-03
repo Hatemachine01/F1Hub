@@ -62,7 +62,7 @@ require 'date'
 				weather_info = "http://api.openweathermap.org/data/2.5/weather?q=#{city}&appid=#{key}&units=imperial"
 				uri = URI(weather_info)
 				response = Net::HTTP.get(uri)
-				weather_parsed = JSON.parse(response)
+				p weather_parsed = JSON.parse(response)
 				next_race_info.append( 
 					raceWeatherDiscription: "#{weather_parsed['weather'][0]['description']}",
 					raceWeatherTemp: "#{weather_parsed['main']['temp']}"
@@ -82,7 +82,6 @@ require 'date'
 		season_standings_data = []
 		parsed_data = data['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings']
 		 parsed_data.each do |driver|
-		 	 driver['driver']
 			season_standings_data << {
 				driverPosition: "#{driver['position']}",
 				driverFirstName: "#{driver['Driver']['givenName']}",
@@ -90,6 +89,8 @@ require 'date'
 				driverCode: "#{driver['Driver']['code']}",
 				driverPoints: "#{driver['points']}",
 				driverURL: "#{driver['Driver']['url']}",
+				driverConstructor: "#{driver['Constructors'][0]['name']}"
+				
 			}
 
 		end

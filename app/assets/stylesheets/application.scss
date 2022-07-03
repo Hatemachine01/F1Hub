@@ -21,16 +21,29 @@
 
 
 
-/* VARIABLES */
 
-:root {
-  --mercedes-color: #00d2be;
-  --redbull-color: #0600ef;
-  --ferrari-color: #dc0000;
-  --hover-color: #38383f;
-  --mclaren-color: #ff8700;
-  --racing-point-color: #f596c8;
-  --renault-color: #fff500;
+.Ferrari {
+ color: red;
+}
+
+.Red {
+  color:blue;
+}
+
+.Mercedes {
+  color: #00d2be;
+}
+
+.McLaren {
+  color:#FF8700;
+}
+
+.Alfa{
+  color:#D40000;
+}
+
+.Alpine {
+  color: #0090FF;
 }
 
 .table-container {
@@ -66,7 +79,7 @@
 }
 
 .table-container tr.table-content td .position {
-  border-right: 5px solid var(--mercedes-color);
+
   padding-right: 10px;
   font-size: 1.4rem;
   font-weight: bold;
@@ -83,7 +96,7 @@
 
 .table-container tr.table-content td .team {
   font-size: 1rem;
-  color: #666;
+  color: blue;
   margin-left: 10px;
 }
 
@@ -96,15 +109,16 @@
 
 .table-container tr.table-content td i {
   margin-left: 20px;
-  color: #e10600;
+  color: blue;
   font-size: 18px;
 }
+
 
 /* HOVER */
 
 .table-container tr:hover {
   background-color: var(--hover-color);
-  color: #ffffff;
+  color: black;
 }
 
 .table-container tr:hover .points {
@@ -163,5 +177,8 @@
 .table-container .table-content.driver10 td {
   margin-left: 0;
 }
+
+
+
 
 
