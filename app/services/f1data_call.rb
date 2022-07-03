@@ -45,8 +45,6 @@ require 'date'
 		next_race_info = []
 		 key = ENV["WEATHER_API"]
 		data["MRData"]['RaceTable']['Races'].each do |race|
-			zone = "Pacific Time (US & Canada)"
-			p ActiveSupport::TimeZone[zone].parse(race["Qualifying"]["time"])
 				
 				next_race_info << {
 				raceName: "#{race["raceName"]}",
