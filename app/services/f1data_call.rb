@@ -41,21 +41,22 @@ require 'date'
 		next_race_data = "https://ergast.com/api/f1/2022/" + "#{season_progress}.json"
 		uri = URI(next_race_data)
 		response = Net::HTTP.get(uri)
-		data = JSON.parse(response)
+		p data = JSON.parse(response)
 		next_race_info = []
-		 key = ENV["WEATHER_API"]
+		key = ENV["WEATHER_API"] 
 		data["MRData"]['RaceTable']['Races'].each do |race|
+
 				
 				next_race_info << {
 				raceName: "#{race["raceName"]}",
 				raceDate: "#{race["date"]}",
 				raceTime: "#{race["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
-				raceFirstPracticeDate: "#{race["FirstPractice"]["date"]}",
-				raceFirstPracticeTime: "#{race["FirstPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
-				raceSecondPracticeDate: "#{race["SecondPractice"]["date"]}",
-				raceSecondPracticeTime: "#{race["SecondPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
-				raceThirdPracticeTime: "#{race["ThirdPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
-				raceThirdPracticeDate: "#{race["ThirdPractice"]["date"]}",
+				# raceFirstPracticeDate: "#{race["FirstPractice"]["date"]}",
+				# raceFirstPracticeTime: "#{race["FirstPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
+				# raceSecondPracticeDate: "#{race["SecondPractice"]["date"]}",
+				# raceSecondPracticeTime: "#{race["SecondPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
+				# raceThirdPracticeTime: "#{race["ThirdPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
+				# raceThirdPracticeDate: "#{race["ThirdPractice"]["date"]}",
 				raceQualifyingTime: "#{race["Qualifying"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
 				}
 				city = race["Circuit"]["Location"]['locality']
@@ -75,7 +76,7 @@ require 'date'
 
 	def self.season_standings
 
-		url = 'https://ergast.com/api/f1/2022/9/driverStandings.json'
+		url = 'http://ergast.com/api/f1/current/driverStandings.json'
 		uri = URI(url)
 		response = Net::HTTP.get(uri)
 		data = JSON.parse(response)
