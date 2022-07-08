@@ -6,9 +6,9 @@ require "i18n"
 require 'json'
 require 'wikipedia'
 
-def circuit_info(racename)		
-	page = Wikipedia.find( racename, :tllimit => 500 )
-	page.summary
+	def circuit_info(racename)		
+		page = Wikipedia.find( racename, :tllimit => 500 )
+		page.summary
 	end
 
 

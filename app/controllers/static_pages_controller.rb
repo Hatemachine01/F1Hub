@@ -23,11 +23,17 @@ class StaticPagesController < ApplicationController
   	@constructor_data = F1dataCall.constructor_standings
   end
 
+  def race_results
+  	@race_results = F1dataCall.race_results(params[:id])
+  end
+
   def calendar
  	@data	= F1dataCall.api_call
+ 	 @raceprogress = @data[3]
   end
 
   def about
   	@next_race = F1dataCall.next_race	
   end
+
 end

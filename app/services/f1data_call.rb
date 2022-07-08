@@ -11,8 +11,10 @@ require 'date'
 		data = JSON.parse(response)
 		@season_data = []
 		season_progress = 0
+		race_id = 0
 		data["MRData"]['RaceTable']['Races'].each do |race|
 			@season_data << {
+				raceID: race_id +=1,
 				raceName: "#{race["raceName"]}",
 				raceDate: "#{race["date"]}",
 				raceLocation: "#{race["Circuit"]["Location"]["locality"]}",
@@ -41,13 +43,14 @@ require 'date'
 		next_race_data = "https://ergast.com/api/f1/2022/" + "#{season_progress}.json"
 		uri = URI(next_race_data)
 		response = Net::HTTP.get(uri)
-		p data = JSON.parse(response)
+		 data = JSON.parse(response)
 		next_race_info = []
 		key = ENV["WEATHER_API"] 
+		id_counter = 0
 		data["MRData"]['RaceTable']['Races'].each do |race|
 
 				
-				next_race_info << {
+				next_race_info << {	
 				raceName: "#{race["raceName"]}",
 				raceDate: "#{race["date"]}",
 				raceTime: "#{race["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
@@ -122,6 +125,25 @@ require 'date'
 	end
 
 
+	def self.race_results(race_id)
+		url = "https://ergast.com/api/f1/2022/#{race_id}/results.json"
+		uri = URI(url)
+		response = Net::HTTP.get(uri)
+		data = JSON.parse(response)
+		race_results_data = []
+		parsed_data = data['MRData']['RaceTable']['Races'][0]['Results'].each do |result|
+		race_results_data << {
+			position: "#{result["position"]}",
+			driverFirstName: "#{result['Driver']['givenName']}",
+			driverLastName: "#{result['Driver']['familyName']}",
+			constructor: "#{result['Constructor']['name']}",
+			status: "#{result['status']}",
+			# time: "#{result['time']['time]']}"
+		}
+		end 
+		race_results_data
+
+	end
 
 
 

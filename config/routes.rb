@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/constructor_standings', to: 'static_pages#constructors'
   get '/calendar', to: 'static_pages#calendar'
   get '/next', to: 'static_pages#about'
+  get '/raceresults/:id', to: 'static_pages#race_results',  as: 'results'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
