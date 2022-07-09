@@ -138,10 +138,10 @@ require 'date'
 			driverLastName: "#{result['Driver']['familyName']}",
 			constructor: "#{result['Constructor']['name']}",
 			status: "#{result['status']}",
-			# time: "#{result['time']['time]']}"
+		    time: result['Time']
 		}
 		end 
-		race_results_data
+	p	race_results_data
 
 	end
 
