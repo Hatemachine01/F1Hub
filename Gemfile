@@ -51,6 +51,7 @@ gem 'nokogiri', '~> 1.13', '>= 1.13.6'
 gem "wikipedia-client"
 gem 'dotenv-rails'
 gem 'rss'
+gem 'flag-icons-rails'
 
 
 

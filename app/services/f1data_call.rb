@@ -24,9 +24,9 @@ require 'date'
 			if Date.parse(race["date"]) < Date.today
 				season_progress += 1
 			end
-			@season_data << {PassedRaces: "#{season_progress}"}
+			# @season_data << {PassedRaces: "#{season_progress}"}
 		 end
-		@season_data
+	p	@season_data
 	end
 
 	def self.next_race

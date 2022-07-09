@@ -29,7 +29,18 @@ class StaticPagesController < ApplicationController
 
   def calendar
  	@data	= F1dataCall.api_call
- 	 @raceprogress = @data[3]
+ 	@raceprogress = @data[3]
+ 	@finished_races = []
+ 	@upcoming_races = []
+ 	@data.each do |race|
+ 		if race[:raceStatus] == "Finished"
+ 			@finished_races << race
+ 		else
+ 			@upcoming_races << race	
+ 		end
+ 	end
+ 	@finished_races
+
   end
 
   def about
