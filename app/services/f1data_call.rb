@@ -19,6 +19,7 @@ require 'date'
 				raceName: "#{race["raceName"]}",
 				raceDate: "#{race["date"]}",
 				raceLocation: "#{race["Circuit"]["Location"]["locality"]}",
+				raceCountry: "#{race["Circuit"]["Location"]["country"]}",
 				raceStatus: (Date.parse(race["date"]) < Date.today ? "Finished" : nil),
 				raceURL: "#{race["url"]}" 
 			}
@@ -52,6 +53,7 @@ require 'date'
 
 				
 				next_race_info << {	
+				raceCountry: "#{race["Circuit"]["Location"]["country"]}",	
 				raceName: "#{race["raceName"]}",
 				raceDate: "#{race["date"]}",
 				raceTime: "#{race["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",

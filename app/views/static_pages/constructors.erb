@@ -16,11 +16,12 @@
             <tbody>
             <% @constructor_data.each do |constructor| %>
               <tr>
+                <td><%= car_image(constructor[:constructorName])%> </td>
                 <td><%= constructor[:constructorPosition]%></td>
                 <td><%= constructor[:constructorName]%></td>
                 <td><%= constructor[:constructorPoints]%></td>
                 <td><%= constructor[:constructorWins]%></td>
-                <td><%= car_image(constructor[:constructorName])%> </td>
+               
                     
               </tr>
             <% end %>
