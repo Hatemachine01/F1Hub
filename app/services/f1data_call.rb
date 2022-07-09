@@ -13,6 +13,7 @@ require 'date'
 		season_progress = 0
 		race_id = 0
 		data["MRData"]['RaceTable']['Races'].each do |race|
+
 			@season_data << {
 				raceID: race_id +=1,
 				raceName: "#{race["raceName"]}",
@@ -121,7 +122,7 @@ require 'date'
 				constructorName:"#{constructor['Constructor']['name']}"
 			}
 		end
-		constructor_standings_data
+	p	constructor_standings_data
 	end
 
 
