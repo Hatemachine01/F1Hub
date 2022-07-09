@@ -22,11 +22,15 @@ html {
   position: relative;
   min-height: 100%;
   font-family: "Titillium Web", sans-serif;
+ 
 }
 
+body {
+  color: white !important;
+}
 
-.body {
-  background-color: #000000;
+th {
+  color: white !important;
 }
 
 
@@ -34,6 +38,7 @@ html {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
 }
 
 .Site-content {

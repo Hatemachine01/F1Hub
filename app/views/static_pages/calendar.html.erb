@@ -9,8 +9,8 @@
      <th>Date </th>
      <th>Location </th>
      <th>Status</th>
-     <th>Wiki</th>
      <th>Results</th>
+     <th>Race Wiki</th>
   </tr>
   </thead>
 
@@ -23,8 +23,8 @@
       <td><%= element[:raceLocation]%></td>
       <td><%= element[:raceStatus]%></td> 
      	<% if element[:raceURL] != nil && element[:raceStatus] == 'Finished' %>
-      <td> <%= link_to "Results", element[:raceURL]%>	 </td>
       <td> <%= link_to "Race Results", results_path(:id =>  element[:raceID]) , :class => "btn btn-primary" %>  </td>
+          <td> <%= link_to "Results", element[:raceURL]%>  </td>
       <% end %>     
     </tr>
   <% end %>
