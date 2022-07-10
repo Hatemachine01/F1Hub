@@ -3,8 +3,11 @@ class StaticPagesController < ApplicationController
 
   def home
   @data	= F1dataCall.season_standings
-  @race_news = []
-  url = 'https://www.f1technical.net/rss/news.xml'
+  end
+
+  def news
+  	 @race_news = []
+  	 url = 'https://www.f1technical.net/rss/news.xml'
 	  URI.open(url) do |rss|
 	    feed = RSS::Parser.parse(rss)
 	    puts "Title: #{feed.channel.title}"
@@ -17,7 +20,7 @@ class StaticPagesController < ApplicationController
    	 	end 
    	 end 
     @race_news
-  end
+   end
 
   def constructors
   	@constructor_data = F1dataCall.constructor_standings

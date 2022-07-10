@@ -3,7 +3,7 @@
 import "@hotwired/turbo-rails"
 import "jquery" 
 import "popper"
-import "bootstrap"
+import * as bootstrap from "bootstrap"
 
 //= require jquery3
 //= require popper
