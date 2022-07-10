@@ -89,6 +89,7 @@ require 'date'
 		season_standings_data = []
 		parsed_data = data['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings']
 		 parsed_data.each do |driver|
+		 	driver
 			season_standings_data << {
 				driverPosition: "#{driver['position']}",
 				driverFirstName: "#{driver['Driver']['givenName']}",
@@ -96,14 +97,15 @@ require 'date'
 				driverCode: "#{driver['Driver']['code']}",
 				driverPoints: "#{driver['points']}",
 				driverURL: "#{driver['Driver']['url']}",
-				driverConstructor: "#{driver['Constructors'][0]['name']}"
+				driverConstructor: "#{driver['Constructors'][0]['name']}",
+				driverNationality: "#{driver['Driver']['nationality']}"
 				
 			}
 
 		end
 
 		
-		 season_standings_data
+	p	 season_standings_data
 
 	end
 

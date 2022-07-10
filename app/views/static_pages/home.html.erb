@@ -1,12 +1,13 @@
 
 
     <div class="col">
-       <table class="table-container driver_standings">
+       <table class="table-container driver_standings ">
         
 
         <tr class="table-content <%=  @data[0][:driverConstructor]%>" >
           <td>
             <span class="position">1</span>
+             <span class="position"><%= location_flag(@data[0][:driverNationality])%></span>
             <span class="driver-name"><%= @data[0][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[0][:driverLastName]%></span>
             <span class="team"><%= @data[0][:driverConstructor]%></span>
@@ -20,6 +21,7 @@
           <td>
 
             <span class="position">2</span>
+             <span class="position"><%= location_flag(@data[1][:driverNationality])%></span>
             <span class="driver-name"><%= @data[1][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[1][:driverLastName]%></span>
             <span class="team"><%= @data[1][:driverConstructor]%></span>
@@ -32,6 +34,7 @@
         <tr class="table-content driver3 <%= @data[2][:driverConstructor]%>">
            <td>
             <span class="position">3</span>
+             <span class="position"><%= location_flag(@data[2][:driverNationality])%></span>
             <span class="driver-name"><%= @data[2][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[2][:driverLastName]%></span>
             <span class="team"><%= @data[2][:driverConstructor]%></span>
@@ -44,6 +47,7 @@
         <tr class="table-content driver4 <%= @data[3][:driverConstructor]%>">
           <td>
             <span class="position">4</span>
+             <span class="position"><%= location_flag(@data[3][:driverNationality])%></span>
             <span class="driver-name"><%= @data[3][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[3][:driverLastName]%></span>
             <span class="team"><%= @data[3][:driverConstructor]%></span>
@@ -55,6 +59,7 @@
         <tr class="table-content <%= @data[4][:driverConstructor]%>">
           <td>
             <span class="position">5</span>
+             <span class="position"><%= location_flag(@data[4][:driverNationality])%></span>
             <span class="driver-name"><%= @data[4][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[4][:driverLastName]%></span>
             <span class="team"><%= @data[4][:driverConstructor]%></span>
@@ -67,6 +72,7 @@
         <tr class="table-content driver6 <%= @data[5][:driverConstructor]%>" >
           <td>
             <span class="position">6</span>
+             <span class="position"><%= location_flag(@data[5][:driverNationality])%></span>
             <span class="driver-name"><%= @data[5][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[5][:driverLastName]%></span>
             <span class="team"><%= @data[5][:driverConstructor]%></span>
@@ -82,6 +88,7 @@
         <tr class="table-content driver7 <%= @data[6][:driverConstructor]%>">
           <td>
             <span class="position">7</span>
+            <span class="position"><%= location_flag(@data[6][:driverNationality])%></span>
             <span class="driver-name"><%= @data[6][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[6][:driverLastName]%></span>
             <span class="team"><%= @data[6][:driverConstructor]%></span>
@@ -94,6 +101,7 @@
         <tr class="table-content driver8 <%= @data[7][:driverConstructor]%>">
           <td>
             <span class="position">8</span>
+             <span class="position"><%= location_flag(@data[7][:driverNationality])%></span>
             <span class="driver-name"><%= @data[7][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[7][:driverLastName]%></span>
             <span class="team"><%= @data[7][:driverConstructor]%></span>
@@ -105,6 +113,7 @@
         <tr class="table-content driver9 <%= @data[8][:driverConstructor]%>">
           <td>
             <span class="position">9</span>
+             <span class="position"><%= location_flag(@data[8][:driverNationality])%></span>
             <span class="driver-name"><%= @data[8][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[8][:driverLastName]%></span>
             <span class="team"><%= @data[8][:driverConstructor]%></span>
@@ -116,6 +125,7 @@
         <tr class="table-content driver10 <%= @data[9][:driverConstructor]%>">
           <td>
             <span class="position">10</span>
+             <span class="position"><%= location_flag(@data[9][:driverNationality])%></span>
             <span class="driver-name"><%= @data[9][:driverFirstName]%></span>
             <span class="driver-surname"><%= @data[9][:driverLastName]%></span>
             <span class="team"><%= @data[9][:driverConstructor]%></span>

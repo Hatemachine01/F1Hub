@@ -85,8 +85,23 @@ require 'wikipedia'
 		flag_icon(:az, element: :div)
 		when "Azerbaijan"
 		flag_icon(:az, element: :div)
+		when "British"
+		flag_icon(:gb, element: :div)
+		when "Mexican"
+		flag_icon(:mx, element: :div)
+		when "Spanish"
+		flag_icon(:es, element: :div)
+		when "Dutch"
+		flag_icon(:nl, element: :div)
+		when "French"
+		flag_icon(:fr, element: :div)
+		when "Monegasque"
+		flag_icon(:mc, element: :div)
+		when "Finnish"
+		flag_icon(:fi, element: :div)
 		end
 
 	end
 
 end
+
