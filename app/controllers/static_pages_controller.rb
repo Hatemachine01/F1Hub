@@ -2,8 +2,12 @@ class StaticPagesController < ApplicationController
 
 
   def home
-  @data	= F1dataCall.season_standings
+  	@data	= F1dataCall.season_standings
   end
+
+  def full_standings
+  	@data	= F1dataCall.season_standings
+  end	
 
   def news
   	 @race_news = []

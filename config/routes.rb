@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/next', to: 'static_pages#about'
   get '/news', to: 'static_pages#news'
   get '/raceresults/:id', to: 'static_pages#race_results',  as: 'results'
+  get '/full_standings', to: 'static_pages#full_standings',  as: 'full_standings'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
