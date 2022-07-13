@@ -57,12 +57,12 @@ require 'date'
 				raceName: "#{race["raceName"]}",
 				raceDate: "#{race["date"]}",
 				raceTime: "#{race["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
-				# raceFirstPracticeDate: "#{race["FirstPractice"]["date"]}",
-				# raceFirstPracticeTime: "#{race["FirstPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
-				# raceSecondPracticeDate: "#{race["SecondPractice"]["date"]}",
-				# raceSecondPracticeTime: "#{race["SecondPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
-				# raceThirdPracticeTime: "#{race["ThirdPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
-				# raceThirdPracticeDate: "#{race["ThirdPractice"]["date"]}",
+				raceFirstPracticeDate: "#{race["FirstPractice"]["date"]}",
+				raceFirstPracticeTime: "#{race["FirstPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
+				raceSecondPracticeDate: "#{race["SecondPractice"]["date"]}",
+				raceSecondPracticeTime: "#{race["SecondPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
+				raceThirdPracticeTime: "#{race["ThirdPractice"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
+				raceThirdPracticeDate: "#{race["ThirdPractice"]["date"]}",
 				raceQualifyingTime: "#{race["Qualifying"]["time"].to_time.in_time_zone("Pacific Time (US & Canada)")}",
 				}
 				city = race["Circuit"]["Location"]['locality']
