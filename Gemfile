@@ -53,6 +53,7 @@ gem 'dotenv-rails'
 gem 'rss'
 gem 'flag-icons-rails'
 gem 'link_thumbnailer'
+gem "font-awesome-rails"
 
 
 

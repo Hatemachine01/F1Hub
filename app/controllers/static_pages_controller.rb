@@ -50,7 +50,18 @@ class StaticPagesController < ApplicationController
 
   end
 
-  
+  def historical_data
+	if params[:date] == nil 
+		@year = params[:year]
+		@data = F1dataCall.historical_drivers_standings(@year)
+		@constructor_data = F1dataCall.historical_constructor_standings(@year)
+	else 
+		@year = params[:date][:year]
+		@data = F1dataCall.historical_drivers_standings(@year)
+		@constructor_data = F1dataCall.historical_constructor_standings(@year)	
+  	end
+ end
+
 
   def about
   	@next_race = F1dataCall.next_race	
