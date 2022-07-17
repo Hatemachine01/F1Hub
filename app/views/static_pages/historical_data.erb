@@ -1,11 +1,15 @@
-
+<div class="container">
+	<h1 class="year"> <%= @year %> Season Results</h1>
+</div>
 
     <div class="row">
-		<h1> <%= @year %></h1>
+
 
     <div class="col">   
+
 			<form action=<%= historical_data_path %> >
 			  <div class="form-group">
+			  	
 			    <%= select_year(Date.today, :start_year => Date.today.year, :end_year =>  Date.today.year-77) %>
 			  </div>
 			  <button type="submit" class="btn btn-primary">Load Season Results</button>
@@ -13,7 +17,7 @@
 
 			<% if @data != nil %>
 
-			 <table class="table table-striped border-primary  table-dark  .table-sm constructor_table">
+			 <table class="table caption-top table-striped border-primary  table-dark  .table-sm constructor_table">
 
 			    <th>Position </th>
 			    <th>First Name </th>
@@ -36,6 +40,7 @@
 			    </tr>
 			  <% end %>
 			  </tbody>
+			     <caption>Drivers' Standings</caption>
 			</table>
 			<% end %>
 
@@ -44,7 +49,7 @@
     <div class="col">
     
         
-           <table class="table table-striped border-primary  table-dark  .table-sm constructor_table">
+           <table class="table caption-top table-striped border-primary  table-dark  .table-sm constructor_table">
             <thead>
             <tr>
                <th>Position </th>
@@ -68,7 +73,8 @@
               </tr>
             <% end %>
             </tbody>
-          
+             <caption>Team Standings</caption>
           </table>
            
     </div>
+
