@@ -28,7 +28,7 @@ require 'date'
 			end
 			# @season_data << {PassedRaces: "#{season_progress}"}
 		 end
-	p	@season_data
+		@season_data
 	end
 
 	def self.next_race
@@ -69,7 +69,7 @@ require 'date'
 				weather_info = "http://api.openweathermap.org/data/2.5/weather?q=#{city}&appid=#{key}&units=imperial"
 				uri = URI(weather_info)
 				response = Net::HTTP.get(uri)
-				p weather_parsed = JSON.parse(response)
+				weather_parsed = JSON.parse(response)
 				next_race_info.append( 
 					raceWeatherDiscription: "#{weather_parsed['weather'][0]['description']}",
 					raceWeatherTemp: "#{weather_parsed['main']['temp']}"
@@ -105,7 +105,7 @@ require 'date'
 		end
 
 		
-	p	 season_standings_data
+		 season_standings_data
 
 	end
 
@@ -126,7 +126,7 @@ require 'date'
 				constructorName:"#{constructor['Constructor']['name']}"
 			}
 		end
-	p	constructor_standings_data
+		constructor_standings_data
 	end
 
 
@@ -146,7 +146,7 @@ require 'date'
 		    time: result['Time']
 		}
 		end 
-	p	race_results_data
+		race_results_data
 
 	end
 

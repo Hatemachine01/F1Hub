@@ -50,6 +50,8 @@ class StaticPagesController < ApplicationController
 
   end
 
+  
+
   def about
   	@next_race = F1dataCall.next_race	
   end
