@@ -1,11 +1,10 @@
-<div class="container">
-    <div class="row">
-      <div class="col-sm-auto">
-      
-     
-       <table class="table-container driver_standings ">
-        
 
+
+
+
+    <div class="row">
+        <div class="col">      
+        <table class="table-container driver_standings table_row ">
         <tr class="table-content <%=  @data[0][:driverConstructor]%>" >
           <td>
             <span class="position">1</span>
@@ -140,32 +139,26 @@
 
       </table>
      
-     </div> 
-
-
-    
-     
-
-      
-    </div>
+        </div>
+        <div class="col">
+            
+   
 
 
 
-<div class="row">
-  <div class="col-md-auto">
 
-    <div class="container podium">
+    <div class="podium">
   <div class="podium__item">
-    <div class="span6"> <%= image_tag("charles") %></div>
-    <p class="podium__city">  <span class="driver-name"><%= @data[1][:driverFirstName]%></span>
-            <span class="driver-surname"><%= @data[1][:driverLastName]%></span></p>
+    <div class="span6"> <img class="driver_img" <%= image_tag("charles")  %> </img></div>
+  <!--   <p class="podium__city">  <span class="driver-name"><%= @data[1][:driverFirstName]%></span>
+            <span class="driver-surname"><%= @data[1][:driverLastName]%></span></p> -->
     <div class="podium__rank second">2</div>
   </div>
   <div class="podium__item">
-      <%= image_tag("max") %>
-
-    <p class="podium__city"><span class="driver-name"><%= @data[0][:driverFirstName]%></span>
-            <span class="driver-surname"><%= @data[0][:driverLastName]%></span></p>
+       <div class="span6"> <img class="driver_img" <%= image_tag("max")  %> </img></div>
+<!-- 
+    <p class="podium__city"><span class="driver-name"><%= @data[0][:driverFirstName]%></span> -->
+<!--     <span class="driver-surname"><%= @data[0][:driverLastName]%></span></p> -->
     <div class="podium__rank first">
       <svg class="podium__number" viewBox="0 0 27.476 75.03" xmlns="http://www.w3.org/2000/svg">
       <g transform="matrix(1, 0, 0, 1, 214.957736, -43.117417)">
@@ -174,25 +167,22 @@
     </svg>
     </div>
 </div>
-  <div class="podium__item row">
-    <div class="span6"> <%= image_tag("fire") %></div>
-    <p class="podium__city">  <span class="driver-name"><%= @data[2][:driverFirstName]%></span>
-            <span class="driver-surname"><%= @data[2][:driverLastName]%></span></p>
+  <div class="podium__item">
+    <div class="span6"> <img class="driver_img" <%= image_tag("fire")  %> </img>
+    </div>
+ <!--    <p class="podium__city">  <span class="driver-name"><%= @data[2][:driverFirstName]%></span>
+            <span class="driver-surname"><%= @data[2][:driverLastName]%></span></p> -->
     <div class="podium__rank third">3</div>
   </div>
-</>
-
-
-<div>
-  
 </div>
- 
-
+</div>
   
 </div>
  <%= link_to "Full Standings", full_standings_path , :class => "full_standings btn btn-primary" %> 
 </div>
 </div>
+ </div>
+ 
 
 
   
