@@ -11,15 +11,18 @@ class StaticPagesController < ApplicationController
 
   def news
   	 @race_news = []
-  	 url = 'https://www.f1technical.net/rss/news.xml'
+  	 url = 'https://www.motorsport.com/rss/f1/news/'
 	  URI.open(url) do |rss|
-	    feed = RSS::Parser.parse(rss)
-	    puts "Title: #{feed.channel.title}"
+	    feed = RSS::Parser.parse(rss, do_validate=false)
+	     "Title: #{feed.channel.title}"
 	    feed.items.each do |item|
+
 	    	@race_news << {
 	    		 	 title: "#{item.title}",
 	       			 link: "#{item.link}",
-	       			 pubDate: "#{item.pubDate}"
+	       			 pubDate: "#{item.pubDate}",
+	       			 imageLink: "#{item.enclosure.url}",
+	       			 description: "#{item.description}"
 	    	}
    	 	end 
    	 end 
