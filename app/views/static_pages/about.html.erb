@@ -59,6 +59,8 @@
     </tbody>
   </table>
     <% end %>
+
+
     <div class="container">
       <button class=" btn btn-warning">
          Weather is currently :      
@@ -117,23 +119,26 @@ var x = setInterval(function() {
 
   
 
-      </p>
-     
+    
       
       
     </div>
 </div>
+
+<div class="mt-4 p-5 bg-dark text-white rounded">
   
   <div class="container">
   <div class="row">
     <div class="col"> 
       <img src="/assets/france_circuit.png" /></div>
     <div class="col">
+          <h1>  <%= @next_race[0][:raceName]%></h1>
           <%=  circuit_info(@next_race[0][:raceName]) %>
           
           </div>
       <div class="w-100"></div>
   </div>
+</div>
 </div>
 
 
