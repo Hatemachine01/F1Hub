@@ -69,7 +69,7 @@ require 'wikipedia'
 		flag_icon(:mc, element: :div)
 		when "Mexico"
 		flag_icon(:mx, element: :div)
-		when "Austria"
+		when "Austria" 
 		flag_icon(:at, element: :div)
 		when "Japan"
 		flag_icon(:jp, element: :div)
@@ -111,6 +111,30 @@ require 'wikipedia'
 		flag_icon(:mc, element: :div)
 		when "Finnish"
 		flag_icon(:fi, element: :div)
+	    when "Japanese" 
+	    flag_icon(:jp, element: :div)
+		when "Australian" 
+	    flag_icon(:au, element: :div)
+		when "Canadian" 
+	    flag_icon(:ca, element: :div)
+	    when "German" 
+	    flag_icon(:de, element: :div)
+		when "Thai" 
+	    flag_icon(:th, element: :div)
+		when "Chinese" 
+	    flag_icon(:cn, element: :div)
+		when "Danish" 
+	    flag_icon(:dk, element: :div)
+		when "Brazilian" 
+	    flag_icon(:br, element: :div)
+		when "Indian" 
+	    flag_icon(:in, element: :div)
+		when "Italian" 
+	    flag_icon(:it, element: :div)
+		when "Argentine" 
+	    flag_icon(:ar, element: :div)
+		when "Austrian" 
+	    flag_icon(:at, element: :div)
 		end
 
 	end
