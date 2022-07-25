@@ -7,7 +7,7 @@ require 'json'
 require 'wikipedia'
 
 	def circuit_info(racename)		
-		page = Wikipedia.find( racename, :tllimit => 500 )
+		page = Wikipedia.find( racename, :tllimit => 1000 )
 		page.summary
 	end
 
@@ -20,7 +20,30 @@ require 'wikipedia'
 		
 			
 		end
-	p	scores
+		scores
+	end
+
+	def driver_full_name(firstName, lastName)
+		firstName + ' ' +  lastName 
+	end
+ 
+	def driver_bio(driver)
+		page = Wikipedia.find(driver, :tllimit => 1000)
+		if page.summary.include?"may refer"
+			"Profile Empty"
+		else
+			page.summary
+		end
+	end
+
+	def driver_bio_pic(driver)
+		page = Wikipedia.find(driver, :tllimit => 1000)
+		page.main_image_url
+		if page.summary.include?"may refer"
+			"Profile Empty"
+		else
+			page.main_image_url
+		end
 	end
 
 	def car_image(constructor)

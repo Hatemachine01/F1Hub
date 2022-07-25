@@ -26,19 +26,22 @@
 			    <th>Team </th>
 			     <th>Code</th>
 			     <th>Points </th>
+			     <th>Driver Profile </th>
 			     
 			  </tr>
 			  </thead>
 			  <tbody>
 			  <% @data.each do |driver| %>
 			    <tr>
+		
 			      <td><%= driver[:driverPosition]%></td>
 			        <td> <span class="position"><%=  location_flag(driver[:driverNationality])%></span></td>
 			      <td><%= driver[:driverFirstName]%></td>
 			      <td><%= driver[:driverLastName]%></td>
 			      <td><%= driver[:driverConstructor]%></td>
 			      <td><%= driver[:driverCode]%></td>
-			      <td><span class="points"> <%= driver[:driverPoints]%></i></td> 
+			      <td><span class="points"> <%= driver[:driverPoints]%></i></td>
+			      <td><%= link_to "Driver Profile", driver_bio_path(driver_full_name(driver[:driverFirstName],driver[:driverLastName])),  class: "btn btn-primary"%> </td> 
 			    </tr>
 			  <% end %>
 			  </tbody>

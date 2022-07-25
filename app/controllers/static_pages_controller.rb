@@ -66,6 +66,10 @@ class StaticPagesController < ApplicationController
  end
 
 
+ def driver_bio
+ 	@driver	= params[:driver]
+ end
+
   def about
   	@next_race = F1dataCall.next_race	
   end
