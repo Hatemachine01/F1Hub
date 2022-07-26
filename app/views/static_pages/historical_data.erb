@@ -41,7 +41,7 @@
 			      <td><%= driver[:driverConstructor]%></td>
 			      <td><%= driver[:driverCode]%></td>
 			      <td><span class="points"> <%= driver[:driverPoints]%></i></td>
-			      <td><%= link_to "Driver Profile", driver_bio_path(driver_full_name(driver[:driverFirstName],driver[:driverLastName])),  class: "btn btn-primary"%> </td> 
+			      <td><%= link_to "Driver Profile", driver_bio_path(driver_full_name(driver[:driverFirstName],driver[:driverLastName]))%> </td> 
 			    </tr>
 			  <% end %>
 			  </tbody>
